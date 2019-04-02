@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AgmCoreModule } from '@agm/core';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
@@ -28,7 +30,10 @@ import { EasterEggComponent } from './components/easter_egg/easter-egg.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCMshlUJSG_WToY9mY66kj679bD4Aw789g'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
