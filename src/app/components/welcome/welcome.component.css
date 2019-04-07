@@ -1,0 +1,17 @@
+.grid-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+#first {
+    justify-self: start;
+}
+
+#second {
+    justify-self: center;
+}
+
+#third {
+    justify-self: end;
+}

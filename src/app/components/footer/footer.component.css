@@ -3,3 +3,8 @@ agm-map {
     height: 400px;
     background-color: grey;
 }
+
+#main {
+    background-color: lightgray;
+    margin-top: 2rem;
+}

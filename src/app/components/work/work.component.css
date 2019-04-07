@@ -1,0 +1,12 @@
+.container-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-cart {
+    width: 300px;
+    height: 350px;
+    background-color: gray;
+}

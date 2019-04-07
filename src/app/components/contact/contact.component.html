@@ -1,1 +1,24 @@
-<div>This is the Contact Page</div>
+<div class="container-view content">
+    <h1>This is the Contact Page</h1>
+    <!-- The classes container, form-group and form-control come from bootstrap. I should add CSS for them to work here -->
+    <div class="container">
+        <form #contactForm="ngForm">
+            <div class="form-group">
+                <label for="email">Your email</label>
+                <input type="text" class="form-control" id="email" name="email" [(ngModel)]="model.email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" id="subject" name="subject" [(ngModel)]="model.subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" name="message" [(ngModel)]="model.text" cols="30" rows="10" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success" (click)="submit()">Send</button>
+
+            {{diagnostic}}
+        </form>
+    </div>
+</div>

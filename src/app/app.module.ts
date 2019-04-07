@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AgmCoreModule } from '@agm/core';
 
@@ -14,6 +15,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { WorkComponent } from './components/work/work.component';
 import { PageNotFoundComponent } from './components/page_not_found/page-not-found.component';
 import { EasterEggComponent } from './components/easter_egg/easter-egg.component';
+
+import { secrets } from '../assets/secrets';
 
 @NgModule({
   declarations: [
@@ -32,8 +35,9 @@ import { EasterEggComponent } from './components/easter_egg/easter-egg.component
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCMshlUJSG_WToY9mY66kj679bD4Aw789g'
-    })
+      apiKey: secrets.google.api_key
+    }),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
