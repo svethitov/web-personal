@@ -1,11 +1,46 @@
 .educard {
-    width: 300px;
-    height: 200px;
-    background-color: gray;
+    width: 900px;
+    height: 300px;
     margin: 1rem;
+    border: 1pt solid lightgrey;
+    display: grid;
+    grid-template-columns: 1fr 1.61fr;
+    grid-template-rows: 1fr 1fr 6fr 1fr;
+    grid-template-areas: 
+        "logo header"
+        "logo period"
+        "logo description"
+        "logo more"
 }
 
-.container-view {
+.header {
+    grid-area: header;
+}
+
+.period {
+    grid-area: period;
+}
+
+.description {
+    grid-area: description;
+}
+
+.link {
+    grid-area: more;
+}
+
+.logo {
+    grid-area: logo;
+    padding: 10px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.flex-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
