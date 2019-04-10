@@ -5,8 +5,40 @@
     align-items: center;
 }
 
-.work-cart {
-    width: 300px;
-    height: 350px;
-    background-color: gray;
+.work-card {
+    width: 900px;
+    height: 300px;
+    margin: 1rem;
+    border: 1pt solid lightgray;
+    display: grid;
+    grid-template-columns: 1fr 1.61fr;
+    grid-template-rows: 1fr 1fr 7fr;
+    grid-template-areas: 
+        "logo header"
+        "logo period"
+        "logo description"
+}
+
+.header {
+    grid-area: header;
+}
+
+.period {
+    grid-area: period;
+}
+
+.description {
+    grid-area: description;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.part-time {
+    border: 1pt solid lightcoral;
+}
+
+.full-time {
+    border: 1pt solid lightcyan;
 }
