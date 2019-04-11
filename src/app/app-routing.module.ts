@@ -15,12 +15,17 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'work', component: WorkComponent },
   { path: 'egg', component: EasterEggComponent },
-  { path: '', redirectTo: '/welcome', pathMatch: 'full'},
-  { path: '**', component: PageNotFoundComponent}
+  { path: '', redirectTo: '/welcome', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(
+    routes,
+    {
+      anchorScrolling: 'enabled'
+    }
+  )],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
