@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AgmCoreModule } from '@agm/core';
 
@@ -15,6 +16,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { WorkComponent } from './components/work/work.component';
 import { PageNotFoundComponent } from './components/page_not_found/page-not-found.component';
 import { EasterEggComponent } from './components/easter_egg/easter-egg.component';
+
+import { MailService } from './services/mail.service';
 
 import { secrets } from '../assets/secrets';
 
@@ -37,9 +40,12 @@ import { secrets } from '../assets/secrets';
     AgmCoreModule.forRoot({
       apiKey: secrets.google.api_key
     }),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    MailService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
