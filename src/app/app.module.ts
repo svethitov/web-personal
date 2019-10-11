@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AgmCoreModule } from '@agm/core';
+import { NgbCollapseModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -41,7 +42,9 @@ import { secrets } from '../assets/secrets';
       apiKey: secrets.google.api_key
     }),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbCollapseModule,
+    NgbAlertModule
   ],
   providers: [
     MailService
