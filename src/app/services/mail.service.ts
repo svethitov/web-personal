@@ -5,6 +5,8 @@ import { map, catchError } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment';
 
+import { Message } from '../common/message';
+
 @Injectable()
 export class MailService {
 
@@ -12,11 +14,11 @@ export class MailService {
         private http: HttpClient
     ) {}
 
-    sendMail(sender: string, subject: string, text: string): Observable<boolean> {
+    sendMail(message: Message): Observable<boolean> {
         const body = new HttpParams()
-            .set('email', sender)
-            .set('subject', subject)
-            .set('message', text);
+            .set('email', message.email)
+            .set('subject', message.subject)
+            .set('message', message.text);
 
         const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
 
