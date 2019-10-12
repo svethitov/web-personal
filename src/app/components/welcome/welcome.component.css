@@ -1,17 +1,20 @@
-.grid-container {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-items: center;
+/* ngb-carousel {
+    width: 66%;
+    min-height: 50rem;
+} */
+
+.container {
+    width: 100%;
+    height: auto;
 }
 
-#first {
-    justify-self: start;
+img {
+    width: 100%;
+    height: auto;
 }
 
-#second {
-    justify-self: center;
-}
-
-#third {
-    justify-self: end;
+#outer {
+    width: 200rem;
+    height: 50rem;
+    padding: 3rem;
 }

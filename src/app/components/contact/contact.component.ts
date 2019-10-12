@@ -13,6 +13,8 @@ export class ContactComponent {
     model = new Message('', '', '');
     userMessage: string = null;
     loading = false;
+    lat = 42.727817;
+    lng = 23.301283;
 
     constructor(
         private mailService: MailService,

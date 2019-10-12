@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AgmCoreModule } from '@agm/core';
-import { NgbCollapseModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap'; 
+import { NgbCollapseModule, NgbAlertModule, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -44,7 +44,8 @@ import { secrets } from '../assets/secrets';
     FormsModule,
     HttpClientModule,
     NgbCollapseModule,
-    NgbAlertModule
+    NgbAlertModule,
+    NgbCarouselModule
   ],
   providers: [
     MailService
